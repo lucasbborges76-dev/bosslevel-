@@ -1,0 +1,54 @@
+{
+    "name": "ControlesDeToque",
+    "maps": [
+        {
+            "name": "Toque",
+            "id": "d9a70424-7e45-44dd-a219-c4d907e23eac",
+            "actions": [
+                {
+                    "name": "ContatoPrimario",
+                    "type": "Button",
+                    "id": "7aed3d33-e025-4e97-965b-d56ae05df366",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PosicaoPrimaria",
+                    "type": "Value",
+                    "id": "f505e776-8324-4574-a541-ba4816b70320",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "abbec9dd-cc79-4c67-a31d-4fd97b30e14b",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ContatoPrimario",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "248e8568-7fe4-4b0c-abd7-0a04c6c9d420",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PosicaoPrimaria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
