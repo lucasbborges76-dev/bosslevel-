@@ -12,12 +12,14 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Animator animator;
     public SpriteRenderer sr;
+    public Vector3 posicaoInicial;
     
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        posicaoInicial = transform.position;
     }
 
     void Update()
@@ -46,6 +48,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Final da fase"))
+        {
+            moveSpeed++;
+            transform.position = posicaoInicial;
         }
     }
 }
